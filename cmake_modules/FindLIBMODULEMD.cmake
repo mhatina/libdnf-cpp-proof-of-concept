@@ -1,0 +1,29 @@
+MESSAGE("Looking for libmodulemd")
+
+SET(LIBMODULEMD_FOUND "NO")
+
+FIND_PATH(LIBMODULEMD_INCLUDE_DIR cppunit/TestCase.h /usr/local/include /usr/include)
+
+
+FIND_LIBRARY(LIBMODULEMD_LIBRARY cppunit
+        ${LIBMODULEMD_INCLUDE_DIR}/../lib
+        /usr/local/lib
+        /usr/local/lib64
+        /usr/lib
+        /usr/lib64)
+
+IF(LIBMODULEMD_INCLUDE_DIR)
+    IF(LIBMODULEMD_LIBRARY)
+        SET(LIBMODULEMD_FOUND "YES")
+        SET(LIBMODULEMD_LIBRARIES ${LIBMODULEMD_LIBRARY} ${CMAKE_DL_LIBS})
+        MESSAGE("Found CppUnit")
+    ELSE (LIBMODULEMD_LIBRARY)
+        IF (LIBMODULEMD_FIND_REQUIRED)
+            MESSAGE(SEND_ERROR "Could not find libmodulemd.")
+        ENDIF (LIBMODULEMD_FIND_REQUIRED)
+    ENDIF(LIBMODULEMD_LIBRARY)
+ELSE(LIBMODULEMD_INCLUDE_DIR)
+    IF (LIBMODULEMD_FIND_REQUIRED)
+        MESSAGE(SEND_ERROR "Could not find libmodulemd-devel.")
+    ENDIF(LIBMODULEMD_FIND_REQUIRED)
+ENDIF(LIBMODULEMD_INCLUDE_DIR)

@@ -1,0 +1,11 @@
+#ifndef LIBDNF_LOCKEDMODULESTATE_HPP
+#define LIBDNF_LOCKEDMODULESTATE_HPP
+
+
+class LockedModuleState
+{
+
+};
+
+
+#endif //LIBDNF_LOCKEDMODULESTATE_HPP

@@ -1,0 +1,11 @@
+#ifndef LIBDNF_ENABLEDMODULESTATE_HPP
+#define LIBDNF_ENABLEDMODULESTATE_HPP
+
+
+class EnabledModuleState
+{
+
+};
+
+
+#endif //LIBDNF_ENABLEDMODULESTATE_HPP

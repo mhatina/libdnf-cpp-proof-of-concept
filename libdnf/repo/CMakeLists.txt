@@ -1,3 +1,5 @@
+ADD_SUBDIRECTORY(modularity)
+
 SET (LIBDNF_SOURCES
         ${LIBDNF_SOURCES}
         ${CMAKE_CURRENT_SOURCE_DIR}/repo.cpp

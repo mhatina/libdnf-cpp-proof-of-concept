@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-#include "package.hpp"
+#include "../package.hpp"
 
 /// Class representing a repository.
 /**

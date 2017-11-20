@@ -14,6 +14,7 @@
     #include "repo/repo.hpp"
     #include "repo/repodict.hpp"
     #include "package/package.hpp"
+    #include "repo/modularity/ModularityAPI.hpp"
 %}
 
 namespace std {
@@ -27,8 +28,10 @@ namespace std {
 %include "repo/repo.hpp"
 %include "repo/repodict.hpp"
 %include "package/package.hpp"
+%include "repo/modularity/ModularityAPI.hpp"
 
 
 %attribute(Repo, std::string, repoid, get_repoid, set_repoid);
 %attribute(Repo, std::vector<std::string>&, baseurl, get_baseurl, set_baseurl);
 %attribute(Repo, std::vector<Package *>&, packages, getPackages, setPackages);
+

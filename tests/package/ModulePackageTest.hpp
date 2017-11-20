@@ -1,7 +1,7 @@
 #ifndef LIBDNF_PACKAGETEST_HPP
 #define LIBDNF_PACKAGETEST_HPP
 
-#include "package.hpp"
+#include "../../libdnf/package.hpp"
 
 #include <cppunit/TestCase.h>
 #include <cppunit/extensions/HelperMacros.h>
