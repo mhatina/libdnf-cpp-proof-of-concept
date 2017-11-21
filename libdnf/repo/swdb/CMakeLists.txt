@@ -1,0 +1,16 @@
+ADD_SUBDIRECTORY(item)
+ADD_SUBDIRECTORY(transaction)
+
+SET (LIBDNF_SOURCES
+        ${LIBDNF_SOURCES}
+        ${CMAKE_CURRENT_SOURCE_DIR}/SWDB.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/SWDBPrivate.cpp
+        PARENT_SCOPE
+        )
+
+SET (LIBDNF_HEADERS
+        ${LIBDNF_HEADERS}
+        ${CMAKE_CURRENT_SOURCE_DIR}/SWDB.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/SWDBPrivate.hpp
+        PARENT_SCOPE
+        )
